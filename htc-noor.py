@@ -127,54 +127,56 @@ if selected=="Home":
         except FileExistsError:
             print("Directory " , dirName1 ,  " already exists")
             
+            if layout_file is not None:
+                with open(os.path.join(f'{dirName1}',layout_file.name),"wb") as f: 
+                    f.write(layout_file.getbuffer())         
+                    st.success("Saved File")
+                
+            if site_photo1 is not None:
+                with open(os.path.join(f'{dirName1}',site_photo1.name),"wb") as f: 
+                    f.write(site_photo1.getbuffer())         
+                    st.success("Saved File")
+                    
+            if site_photo2 is not None:
+                with open(os.path.join(f'{dirName1}',site_photo2.name),"wb") as f: 
+                    f.write(site_photo2.getbuffer())         
+                    st.success("Saved File")
+                    
+            if site_photo3 is not None:
+                with open(os.path.join(f'{dirName1}',site_photo3.name),"wb") as f: 
+                    f.write(site_photo3.getbuffer())         
+                    st.success("Saved File")       
+                    
+                    
+            if site_photo4 is not None:
+                with open(os.path.join(f'{dirName1}',site_photo4.name),"wb") as f: 
+                    f.write(site_photo4.getbuffer())         
+                    st.success("Saved File")
+                    
+                    
+                    
+            if sld is not None:
+                with open(os.path.join(f'{dirName1}',sld.name),"wb") as f: 
+                    f.write(sld.getbuffer())         
+                    st.success("Saved File")
+                    
+                    
+                    
+            if mlp_photo is not None:
+                with open(os.path.join(f'{dirName1}',mlp_photo.name),"wb") as f: 
+                    f.write(mlp_photo.getbuffer())         
+                    st.success("Saved File")
+            
         
         
-    else:
+    #else:
         
-        st.write(f'<p style="background-color:#1F306B;color:#FFFFFF;text-align:center;padding:0.4rem;font-size:26px;border-radius:7px 7px 7px 7px;"><b>PLEASE FILL OUT THE FORM TO PROCEED TO NEXT STEP</b></p>', unsafe_allow_html=True)
+        #st.write(f'<p style="background-color:#1F306B;color:#FFFFFF;text-align:center;padding:0.4rem;font-size:26px;border-radius:7px 7px 7px 7px;"><b>PLEASE FILL OUT THE FORM TO PROCEED TO NEXT STEP</b></p>', unsafe_allow_html=True)
         
   #-----------------------------------File Upload & Save Section----------------------------------  
             #site_photo_1
         #submitted2=st.form_submit_button('SUBMIT')
-    if layout_file is not None:
-        with open(os.path.join(f'{dirName1}',layout_file.name),"wb") as f: 
-            f.write(layout_file.getbuffer())         
-            st.success("Saved File")
-        
-    if site_photo1 is not None:
-        with open(os.path.join(f'{dirName1}',site_photo1.name),"wb") as f: 
-            f.write(site_photo1.getbuffer())         
-            st.success("Saved File")
-            
-    if site_photo2 is not None:
-        with open(os.path.join(f'{dirName1}',site_photo2.name),"wb") as f: 
-            f.write(site_photo2.getbuffer())         
-            st.success("Saved File")
-            
-    if site_photo3 is not None:
-        with open(os.path.join(f'{dirName1}',site_photo3.name),"wb") as f: 
-            f.write(site_photo3.getbuffer())         
-            st.success("Saved File")       
-            
-            
-    if site_photo4 is not None:
-        with open(os.path.join(f'{dirName1}',site_photo4.name),"wb") as f: 
-            f.write(site_photo4.getbuffer())         
-            st.success("Saved File")
-            
-            
-            
-    if sld is not None:
-        with open(os.path.join(f'{dirName1}',sld.name),"wb") as f: 
-            f.write(sld.getbuffer())         
-            st.success("Saved File")
-            
-            
-            
-    if mlp_photo is not None:
-        with open(os.path.join(f'{dirName1}',mlp_photo.name),"wb") as f: 
-            f.write(mlp_photo.getbuffer())         
-            st.success("Saved File")
+    
             
     
     
